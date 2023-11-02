@@ -619,5 +619,6 @@
             "challenge_info_tenthousandth_contribute" : "Make your 1000th contribution",
     
             "challenge_title_thousandth_discussion" : "I think, therefore I am.",
-            "challenge_info_thousandth_discussion" : "Post the 1000th discussion thread"
+            "challenge_info_thousandth_discussion" : "Post the 1000th discussion thread",
+        "authenticate": "Authenticate"
 }

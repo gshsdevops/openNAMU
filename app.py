@@ -458,6 +458,8 @@ app.route('/change/skin_set')(user_setting_skin_set)
 app.route('/change/top_menu', methods=['GET', 'POST'])(user_setting_top_menu)
 app.route('/change/user_name', methods=['GET', 'POST'])(user_setting_user_name)
 app.route('/change/user_name/<user_name>', methods=['GET', 'POST'])(user_setting_user_name)
+
+app.route('/authenticate', methods = ['POST', 'GET'])(user_authenticate)
 # 하위 호환용 S
 app.route('/skin_set')(user_setting_skin_set)
 # 하위 호환용 E

@@ -114,6 +114,8 @@ def user_setting():
                             <span>''' + load_lang('email') + ''' : ''' + email + '''</span> <a href="/change/email">(''' + load_lang('email_change') + ''')</a> <a href="/change/email/delete">(''' + load_lang('email_delete') + ''')</a>
                             <hr class="main_hr">
                             <span>''' + load_lang('password_instead_key') + ''' : ''' + ramdom_key + ''' <a href="/change/key">(''' + load_lang('key_change') + ''')</a> <a href="/change/key/delete">(''' + load_lang('key_delete') + ''')</a></span>
+                            <hr class="main_hr">
+                            <a href="/authenticate">(''' + load_lang('authenticate') + ''')</a>
                             <h2>''' + load_lang('main') + '''</h2>
                             <a href="/change/head">(''' + load_lang('user_head') + ''')</a> <a href="/change/top_menu">(''' + load_lang('user_added_menu') + ''')</a>
                             <hr class="main_hr">
