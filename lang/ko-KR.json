@@ -570,5 +570,7 @@
     "table_scroll": "표에 스크롤 사용",
     "data": "데이터",
     "volume": "용량",
-    "authenticate": "인증"
+    "authenticate": "gs.hs.kr 인증",
+    "authenticated": "연결됨",
+    "connect": "계정 연결"
 }
