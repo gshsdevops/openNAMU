@@ -336,7 +336,7 @@ def get_db_table_list():
     create_data['alarm'] = ['name', 'data', 'date']
     create_data['ua_d'] = ['name', 'ip', 'ua', 'today', 'sub']
 
-    create_data['user_set'] = ['name', 'id', 'data', 'linked']
+    create_data['user_set'] = ['name', 'id', 'data']
 
     create_data['bbs_set'] = ['set_name', 'set_code', 'set_id', 'set_data']
     create_data['bbs_data'] = ['set_name', 'set_code', 'set_id', 'set_data']

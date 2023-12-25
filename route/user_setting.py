@@ -103,6 +103,16 @@ def user_setting():
                 db_data = curs.fetchall()
                 sub_user_name = db_data[0][0] if db_data else ''
 
+                curs.execute(db_change('select data from user_set where name = "linked" and id = ?'), [ip])
+                data = curs.fetchall()
+                linked = data[0][0] if data and data[0][0] != '' else None
+
+                authenticate = '';
+                if linked == None:
+                    authenticate = '''<a href="/authenticate">(''' + load_lang('authenticate') + ''')</a>'''
+                else:
+                    authenticate = linked + ''' ''' + load_lang('authenticated');
+
                 return easy_minify(flask.render_template(skin_check(),
                     imp = [load_lang('user_setting'), wiki_set(), wiki_custom(), wiki_css([0, 0])],
                     data = '''
@@ -115,7 +125,7 @@ def user_setting():
                             <hr class="main_hr">
                             <span>''' + load_lang('password_instead_key') + ''' : ''' + ramdom_key + ''' <a href="/change/key">(''' + load_lang('key_change') + ''')</a> <a href="/change/key/delete">(''' + load_lang('key_delete') + ''')</a></span>
                             <hr class="main_hr">
-                            <a href="/authenticate">(''' + load_lang('authenticate') + ''')</a>
+                            <span>''' + load_lang('connect') + ''' : ''' + authenticate + '''</span>
                             <h2>''' + load_lang('main') + '''</h2>
                             <a href="/change/head">(''' + load_lang('user_head') + ''')</a> <a href="/change/top_menu">(''' + load_lang('user_added_menu') + ''')</a>
                             <hr class="main_hr">
