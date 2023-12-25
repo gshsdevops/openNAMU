@@ -7,9 +7,6 @@ import shutil
 from route.tool.func import *
 from route import *
 
-from flask_mail import Mail
-import route.tool.func_mail
-
 if platform.system() == 'Linux':
     for for_a in os.listdir(os.path.join("route_go", "bin")):
         os.system('chmod +x ./route_go/bin/' + for_a)
@@ -45,7 +42,7 @@ with get_db_connect() as conn:
 
     if data_db_set['type'] == 'mysql':
         try:
-            e(db_change(
+            curs.execute(db_change(
                 'create database ' + data_db_set['name'] + ' ' + \
                 'default character set utf8mb4'
             ))
@@ -156,13 +153,6 @@ with get_db_connect() as conn:
 
     app.config['JSON_AS_ASCII'] = False
     app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-
-    with open('mail.json', encoding = 'utf8') as file_data:
-        mail_config = json.loads(file_data.read())
-        for i in mail_config:
-            app.config[i] = mail_config[i];
-
-    route.tool.func_mail.mail = Mail (app)
 
     log = logging.getLogger('waitress')
     log.setLevel(logging.ERROR)

@@ -620,8 +620,5 @@
     
             "challenge_title_thousandth_discussion" : "I think, therefore I am.",
             "challenge_info_thousandth_discussion" : "Post the 1000th discussion thread",
-        "authenticate": "gs.hs.kr authenticate",
-        "authenticated": "connected",
-        "connect": "Connection",
-        "wrongaccount": "Not an appropriate gs.hs.kr mail account"
+        "authenticate": "Authenticate"
 }
