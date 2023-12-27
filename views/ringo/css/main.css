@@ -37,7 +37,7 @@ header#main {
     padding-left: 20px;
     padding-right: 20px;
     
-    background-color: #99ddff;
+    background-color: #a0bbee;
 }
 
 header#main a {
@@ -251,7 +251,7 @@ header#section {
     
     border-bottom: 0px solid;
     
-    background-color: #cceeff;
+    background-color: #4488ff;
 }
 
 article.main {
@@ -325,7 +325,7 @@ footer.only_mobile {
     margin-top: 0px;
 }
 
-#b_logo {
+#b_logo, #gshs_logo {
     width: 100px;
 }
 
