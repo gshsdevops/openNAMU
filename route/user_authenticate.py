@@ -29,7 +29,7 @@ def user_authenticate():
 
                 hs = os.environ['OpenNAMUSalt'] + str(len(user_name)) + ':' + user_name + str(len(address)) + ':' + address
 
-                url = f"http://localhost:3000/authenticate?hash={hashlib.sha256(hs.encode('utf-8')).hexdigest()}&address={address}";
+                url = f"http://cslab.gs.hs.kr/authenticate?hash={hashlib.sha256(hs.encode('utf-8')).hexdigest()}&address={address}";
 
                 custom_send_email(address, "GSHS Wiki 계정을 인증하십시오", name = user_name, id = os.urandom(4).hex(), url = url);
                 return redirect('/change');
