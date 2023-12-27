@@ -213,6 +213,7 @@ def view_read(name = 'Test', doc_rev = '', doc_from = '', do_type = ''):
                 ['history/' + url_pas(name), load_lang('history')], 
                 ['xref/' + url_pas(name), load_lang('backlink')], 
                 ['acl/' + url_pas(name), load_lang('setting'), acl],
+                ['ps/' + url_pas(name), load_lang('publicity')]
             ]
 
             if do_type == 'from':

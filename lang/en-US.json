@@ -623,5 +623,6 @@
         "authenticate": "gs.hs.kr authenticate",
         "authenticated": "connected",
         "connect": "Connection",
-        "wrongaccount": "Not an appropriate gs.hs.kr mail account"
+        "wrongaccount": "Not an appropriate gs.hs.kr mail account",
+        "publicity": "Publicity Setting"
 }

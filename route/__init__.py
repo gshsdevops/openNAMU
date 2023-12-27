@@ -162,6 +162,7 @@ from route.view_random import view_random
 from route.view_raw import view_raw_2
 from route.view_read import view_read
 from route.view_xref import view_xref
+from route.edit_ps import edit_ps
 
 from route.vote_add import vote_add
 from route.vote_close import vote_close

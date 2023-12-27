@@ -573,5 +573,6 @@
     "authenticate": "gs.hs.kr 인증",
     "authenticated": "연결됨",
     "connect": "계정 연결",
-    "wrongaccount": "올바른 gs.hs.kr 메일 주소가 아닙니다."
+    "wrongaccount": "올바른 gs.hs.kr 메일 주소가 아닙니다.",
+    "publicity": "공개 설정"
 }

@@ -407,6 +407,8 @@ app.route('/down/<everything:name>')(view_down)
 
 app.route('/acl/<everything:name>', methods = ['POST', 'GET'])(view_acl)
 
+app.route('/ps/<everything:name>', methods = ['POST', 'GET'])(edit_ps)
+
 # everything 다음에 추가 붙은 경우에 대해서 재검토 필요 (진행중)
 app.route('/w_rev/<int(signed = True):doc_rev>/<everything:name>')(view_read)
 app.route('/w_from/<everything:name>', defaults = { 'do_type' : 'from' })(view_read)

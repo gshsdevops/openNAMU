@@ -1781,6 +1781,17 @@ def acl_check(name = 'test', tool = '', topic_num = '1'):
 
         ip = ip_check()
         get_ban = ban_check()
+
+        curs.execute(db_change('select data from user_set where name = "linked" and id = ?'), [ip])
+        data = curs.fetchall()
+        linked = data[0][0] if data and data[0][0] != '' else None
+
+        curs.execute(db_change("select set_data from data_set where doc_name = ? and set_name = 'publicity'"), [name])
+        db_data = curs.fetchall()
+        publicity = db_data[0][0] if db_data else False
+
+        if linked == None and publicity != False:
+            return 1
         
         if tool == '' and name:
             if acl_check(name, 'render') == 1:
