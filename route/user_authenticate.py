@@ -114,6 +114,13 @@ def user_authenticate():
                 if linked != None:
                     return re_error('/error/0');
 
+                curs.execute(db_change('select data from user_set where name = "linked" and data = ?'), [address])
+                data = curs.fetchall()
+                linked = data[0][0] if data and data[0][0] != '' else None
+
+                if linked != None:
+                    return re_error('/error/0');
+
                 curs.execute(db_change('insert into user_set (name, id, data) values ("linked", ?, ?)'), [ip, address])
                 data = curs.fetchall()
 
