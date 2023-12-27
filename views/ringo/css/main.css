@@ -200,7 +200,7 @@ aside {
     padding-left: 20px;
     padding-right: 20px;
     
-    background-color: #ffeaee;
+    background-color: #dddddd;
     
     min-height: calc(100vh - (50px + 20px));
 }
